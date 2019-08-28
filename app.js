@@ -2,9 +2,9 @@ const moment = Moment.load();
 
 const GLOBAL = {
   //id of the Google form
-  formId : "1tyT79FW71cgHpb8IFnsGbWtj6rIfA2cNqHyI32PR11s",
+  formId : "{FORM ID}",
   //id of the calendar
-  calendarId : "stumptowncoffee.com_hgocsc81bh3gfamj2qn94bhjj4@group.calendar.google.com",
+  calendarId : "{CALENDAR ID}@group.calendar.google.com",
   //mapping of form sections for later use
   formMap : {
     eventTitle : "Name of guest",
