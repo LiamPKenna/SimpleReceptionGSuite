@@ -66,16 +66,18 @@ function getFormResponse() {
   return eventObject;
 }
 
-function createCalendarEvent(eventObject) {
+const createCalendarEvent = (eventObject) => {
   //Get a calendar object by opening the calendar using id stored in the GLOBAL variable object, then populate with values
   const calendar = CalendarApp.getCalendarById(GLOBAL.calendarId),
-      title = eventObject.title + " for " + eventObject.hereFor + " by " + eventObject.contactBy,
+      title = `${eventObject.title} for ${eventObject.hereFor} by ${eventObject.contactBy}`,
       startTime = moment(eventObject.startTime).toDate(),
       addEndTime = moment(startTime).add(30, 'minutes'),
       endTime = moment(addEndTime).toDate();
   //an options object containing the description and location for the event
   const options = {
-    description : "Here to see " + eventObject.hereFor + ".  Contact by " + eventObject.contactBy + ".  Other information: " + eventObject.otherInfo,
+    description : `Here to see ${eventObject.hereFor}.  
+                   Contact by: ${eventObject.contactBy}.  
+                   Other information: ${eventObject.otherInfo}`,
     guests : eventObject.email,
     location: "Reception",
   };
