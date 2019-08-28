@@ -16,12 +16,12 @@ const GLOBAL = {
   },
 }
 
-function onFormSubmit() {
+const onFormSubmit = () => {
   const eventObject = getFormResponse();
   const event = createCalendarEvent(eventObject);
 }
 
-function getFormResponse() {
+const getFormResponse = () => {
   // Get form using id stored in the GLOBAL variable object
   const form = FormApp.openById(GLOBAL.formId),
       //Get all responses from form and return as an array
